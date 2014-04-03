@@ -1,25 +1,44 @@
 #!/bin/bash
 
-#Instalattion and uninstallation script for No-IP2 written by Rafael Cunha
+#    Instalattion and uninstallation script for No-IP2 written by Rafael Cunha
 
-#Este programa é um software livre: você pode redistribuí-lo 
-#e/ou modificá-lo sob os termos da GNU General Public License 
-#publicada pela Free Software Foundation, na versão 3 da 
-#licença, ou (por sua opção) qualquer versão posterior.
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License as published by
+#    the Free Software Foundation, either version 3 of the License, or
+#    (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+#
+#    You should have received a copy of the GNU General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>
 
-#Este programa é distribuído na esperança de ser útil,
-#mas SEM NENHUMA GARANTIA; sem nem mesmo garantia implícita de
-#ADEQUAÇÃO ao MERCADO ou APLICAÇÃO EM PARTICULAR.  Veja a 
-#GNU General Public License para maiores detalhes.
+# Tested on Ubuntu 12.04. Suit to other distributions
+# or versions in case it is not according your requirements.
+# For running this script type ./duc.sh in the directory
+# that script was saved.
 
-#Você deveria receber uma cópia da GNU General Public License
-#juntamente com esse programa.  Caso contrário, veja 
-#<http://www.gnu.org/licenses/>.
 
-#Testado no Ubuntu 12.04. Adeque a outras distribuições
-#ou versões caso não esteja de acordo com suas necessidades.
-#Para executar este script digite ./duc.sh na pasta
-#em que o script estiver salvo.
+#    Este programa é um software livre: você pode redistribuí-lo 
+#    e/ou modificá-lo sob os termos da GNU General Public License 
+#    publicada pela Free Software Foundation, na versão 3 da 
+#    licença, ou (por sua opção) qualquer versão posterior.
+
+#    Este programa é distribuído na esperança de ser útil,
+#    mas SEM NENHUMA GARANTIA; sem nem mesmo garantia implícita de
+#    ADEQUAÇÃO ao MERCADO ou APLICAÇÃO EM PARTICULAR.  Veja a 
+#    GNU General Public License para maiores detalhes.
+
+#    Você deveria receber uma cópia da GNU General Public License
+#    juntamente com esse programa.  Caso contrário, veja 
+#    <http://www.gnu.org/licenses/>.
+
+# Testado no Ubuntu 12.04. Adeque a outras distribuições
+# ou versões caso não esteja de acordo com suas necessidades.
+# Para executar este script digite ./duc.sh na pasta
+# em que o script estiver salvo.
 
 function esperar_roteador() {
 	while true; do
