@@ -52,13 +52,13 @@ function esperar_roteador() {
 }
 
 function instalar() {
-    echo Esperando Conexão com a Internet
+    echo "Checking Internet connection"
     esperar_roteador
-    echo Uhuu"!" Conexão OK
+    echo "Uhuu! We've got a connection. OK"
     echo ================================================
     echo
 
-    echo "Aguarde enquanto os repositorios são atualizados..."
+    echo "Wait while we update your system..."
     echo
     sudo apt-get update -qy > /dev/null
     sudo apt-get install build-essential
@@ -73,7 +73,7 @@ function instalar() {
     sudo make clean
     sudo make && sudo make install
     echo
-    echo "Adicionando NOIP2 na inicialização do Sistema";
+    echo "Adding NOIP2 to system startup";
     echo
     cd /usr/local/src/noip2/
     sudo mv -v debian.noip2.sh /etc/init.d/noip2
@@ -81,7 +81,7 @@ function instalar() {
     sudo chmod +x /etc/init.d/noip2
 
     sudo update-rc.d noip2 defaults
-    echo "Instalação concluída!"
+    echo "Installation finished!"
     sleep 6
     echo ""
     clear
@@ -149,23 +149,23 @@ function desinstalar() {
 while :
     do
 
-        echo "O você deseja fazer?"         
+        echo "What do you want to do?"         
         echo
-        echo "DIGITE UM NÚMERO"
-        echo "1 . Instalar o No-IP2"
-        echo "2 . Desinstalar o No-IP2"
-        echo "3 . Reiniciar o sistema"
-        echo "4 . Sair"
+        echo "TYPE A NUMBER"
+        echo "1 . Install No-IP2"
+        echo "2 . Uninstall No-IP2"
+        echo "3 . Reboot your system"
+        echo "4 . Exit"
 
         read opt
         echo
         case $opt in
             1)
-                echo "Instalando No-IP2"
+                echo "Installing No-IP2.."
                 instalar;
                 ;;
             2)
-                echo "Desinstalando No-IP2"
+                echo "Uninstalling No-IP2"
                 desinstalar;
                 ;;
             3)
@@ -176,6 +176,6 @@ while :
                 exit;
                 ;;
             *) clear;
-                echo Opção inválida;;
+                echo "Invalid option";;
         esac
 done
