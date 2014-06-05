@@ -1,7 +1,7 @@
 duc-installer
 =============
 
-Script for installing No-IP in linux.
+Script for installing No-IP on linux.
 
 
 For using it, just download duc.sh and set the proper permissions:
